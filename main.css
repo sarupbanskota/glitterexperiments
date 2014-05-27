@@ -12,9 +12,8 @@
   align($direction: both)
   cf()
 */
-* {
-  background: rgba(0, 0, 0, 0.05);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#10000000, endColorstr=#10000000); }
+body {
+  background: url("geometry.png"); }
 
 nav {
   *zoom: 1;
@@ -26,7 +25,8 @@ nav {
   padding-right: 0;
   width: 100%;
   margin-left: 0%;
-  margin-right: 3%; }
+  margin-right: 3%;
+  background-color: #141823; }
   nav:before, nav:after {
     content: '';
     display: table; }
@@ -53,8 +53,6 @@ aside {
   width: 22.75%;
   margin-left: 0%;
   margin-right: 3%;
-  background: url("photography.png");
-  color: #141823;
   font-family: 'Merriweather Sans', sans-serif; }
   aside:before, aside:after {
     content: '';
@@ -63,6 +61,23 @@ aside {
     clear: both; }
   aside:last-child {
     margin-right: 0%; }
+  aside section {
+    margin-bottom: 12px; }
+  aside .map {
+    text-align: right;
+    padding-right: 12px; }
+    aside .map header {
+      color: #141823;
+      font-weight: bold;
+      font-size: 12px; }
+    aside .map a {
+      text-decoration: none;
+      color: #141823; }
+    aside .map ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      font-size: 12px; }
 
 article {
   *zoom: 1;
@@ -84,7 +99,9 @@ article {
   width: 48.5%;
   margin-left: 0%;
   margin-right: 3%;
-  text-align: center; }
+  color: #141823;
+  background-color: white;
+  box-shadow: inset 0px 0px 0.5px 0px #141823; }
   article:before, article:after {
     content: '';
     display: table; }
@@ -97,51 +114,87 @@ article {
     clear: both; }
   article:last-child {
     margin-right: 0%; }
-
-.social {
-  *zoom: 1;
-  width: auto;
-  max-width: 1410px;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 0;
-  padding-right: 0;
-  *zoom: 1;
-  float: left;
-  display: inline;
-  clear: none;
-  text-align: inherit;
-  padding-left: 0;
-  padding-right: 0;
-  width: 48.5%;
-  margin-left: 0%;
-  margin-right: 3%; }
-  .social:before, .social:after {
-    content: '';
-    display: table; }
-  .social:after {
-    clear: both; }
-  .social:before, .social:after {
-    content: '';
-    display: table; }
-  .social:after {
-    clear: both; }
-  .social:last-child {
-    margin-right: 0%; }
+  article header {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    margin-top: 96px; }
+    article header h1 {
+      font-size: 24px;
+      margin: 0px; }
+    article header img {
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      border-radius: 100%;
+      max-width: 25%;
+      height: auto; }
+    article header p {
+      padding: 0;
+      margin: 2px auto;
+      font-family: 'Merriweather Sans', sans-serif;
+      font-size: 18px; }
+    article header .social {
+      *zoom: 1;
+      width: auto;
+      max-width: 1410px;
+      float: none;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0;
+      *zoom: 1;
+      float: left;
+      display: inline;
+      clear: none;
+      text-align: inherit;
+      padding-left: 0;
+      padding-right: 0;
+      width: 48.5%;
+      margin-left: 0%;
+      margin-right: 3%;
+      background-color: pink; }
+      article header .social:before, article header .social:after {
+        content: '';
+        display: table; }
+      article header .social:after {
+        clear: both; }
+      article header .social:before, article header .social:after {
+        content: '';
+        display: table; }
+      article header .social:after {
+        clear: both; }
+      article header .social:last-child {
+        margin-right: 0%; }
+  article .feed {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+    margin-top: 24px;
+    background-color: #141823; }
+    article .feed:before, article .feed:after {
+      content: '';
+      display: table; }
+    article .feed:after {
+      clear: both; }
+    article .feed:last-child {
+      margin-right: 0%; }
+    article .feed ul {
+      list-style-type: none;
+      padding: 24px;
+      margin: 0;
+      font-size: 14px;
+      color: white;
+      font-family: 'Merriweather Sans', sans-serif; }
+    article .feed a {
+      text-decoration: none; }
 
 .feed {
   text-align: left; }
-
-.hero {
-  font-family: 'Merriweather', serif; }
-  .hero h1 {
-    font-size: 140%; }
-  .hero img {
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    border-radius: 100%;
-    max-width: 40%;
-    height: auto; }

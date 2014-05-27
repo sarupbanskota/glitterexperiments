@@ -1,7 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Merriweather:900|Merriweather+Sans);
 
 @import 'jeet/index';
-@include edit;
+//@include edit;
+
+// Variables come here
+$map_blue: #141823;
+
+body{
+	background: url('geometry.png');
+}
 
 
 @mixin border-radius($radius) {
@@ -13,6 +20,8 @@
 
 nav{
   @include col(1);
+	background-color:$map_blue;
+
 	img{
 		@include border-radius(2px);
 		max-width: 16px;
@@ -22,37 +31,90 @@ nav{
 
 aside {
 	@include col(1/4);
-	background: url('photography.png');
-	color: #141823;
   font-family: 'Merriweather Sans', sans-serif;
+
+  section{
+  	margin-bottom: 12px;
+  }
+
+  .map{
+    text-align: right;
+    padding-right: 12px;
+
+    header{
+      color: $map_blue;
+      font-weight:bold;
+      font-size:12px;
+    }
+
+    a{
+	    text-decoration:none;
+	    color: $map_blue;
+    }
+
+    ul{
+      list-style-type:none;
+      padding:0;
+      margin:0;
+      font-size: 12px;
+    }
+
+  }
 }
 
 article {
 	@include center;
 	@include col(1/2);
-	text-align: center;
-}
+	color:$map_blue;
+	background-color: white;
+  box-shadow:inset 0px 0px 0.5px 0px $map_blue;
 
-.social{
-	@include center;
-	@include col(1/2);
+	header{
+		text-align: center;
+		font-family: 'Merriweather', serif;
+		margin-top: 96px;
+	  h1{
+			font-size: 24px;
+			margin:0px
+	  }
+		img{
+		  @include border-radius(100%);
+			max-width: 25%;
+			height: auto;
+		}
+		p{
+			padding: 0;
+			margin:2px auto;
+  		font-family: 'Merriweather Sans', sans-serif;
+			font-size: 18px;
+		}
+
+		.social{
+			@include center;
+			@include col(1/2);
+			background-color: pink;
+		}
+	}
+
+  .feed{
+    @include col(1);
+  	margin-top: 24px;
+  	background-color: $map_blue;
+  	ul{
+  		list-style-type: none;
+  		padding: 24px;
+  		margin:0;
+  		font-size: 14px;
+  		color: white;
+		  font-family: 'Merriweather Sans', sans-serif;
+  	}
+  	a{
+  		text-decoration:none;
+  	}
+  }
 }
 
 .feed{
 	text-align:left;
 }
 
-.hero{
-	font-family: 'Merriweather', serif;
-  h1{
-		font-size: 140%;
-  }
-	img{
-	  @include border-radius(100%);
-		max-width: 40%;
-		height: auto;
-	}
-	p{
-
-	}
-}
