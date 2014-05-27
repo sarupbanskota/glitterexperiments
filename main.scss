@@ -1,0 +1,58 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather:900|Merriweather+Sans);
+
+@import 'jeet/index';
+@include edit;
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+nav{
+  @include col(1);
+	img{
+		@include border-radius(2px);
+		max-width: 16px;
+		height: auto;
+	}
+}
+
+aside {
+	@include col(1/4);
+	background: url('photography.png');
+	color: #141823;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+article {
+	@include center;
+	@include col(1/2);
+	text-align: center;
+}
+
+.social{
+	@include center;
+	@include col(1/2);
+}
+
+.feed{
+	text-align:left;
+}
+
+.hero{
+	font-family: 'Merriweather', serif;
+  h1{
+		font-size: 140%;
+  }
+	img{
+	  @include border-radius(100%);
+		max-width: 40%;
+		height: auto;
+	}
+	p{
+
+	}
+}
