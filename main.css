@@ -12,6 +12,10 @@
   align($direction: both)
   cf()
 */
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
   background: url("geometry.png"); }
 
@@ -42,6 +46,9 @@ nav {
     max-width: 16px;
     height: auto; }
 
+.left, .right {
+  margin-top: 48px; }
+
 aside {
   *zoom: 1;
   float: left;
@@ -63,21 +70,22 @@ aside {
     margin-right: 0%; }
   aside section {
     margin-bottom: 12px; }
-  aside .map {
-    text-align: right;
-    padding-right: 12px; }
-    aside .map header {
+  aside .map, aside .widget {
+    text-align: right; }
+    aside .map header, aside .widget header {
       color: #141823;
       font-weight: bold;
       font-size: 12px; }
-    aside .map a {
+    aside .map a, aside .widget a {
       text-decoration: none;
       color: #141823; }
-    aside .map ul {
+    aside .map ul, aside .widget ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
       font-size: 12px; }
+  aside .widget {
+    text-align: left; }
 
 article {
   *zoom: 1;
@@ -117,7 +125,7 @@ article {
   article header {
     text-align: center;
     font-family: 'Merriweather', serif;
-    margin-top: 96px; }
+    margin-top: 48px; }
     article header h1 {
       font-size: 24px;
       margin: 0px; }
@@ -126,7 +134,7 @@ article {
       -moz-border-radius: 100%;
       -ms-border-radius: 100%;
       border-radius: 100%;
-      max-width: 25%;
+      max-width: 20%;
       height: auto; }
     article header p {
       padding: 0;
@@ -150,10 +158,9 @@ article {
       text-align: inherit;
       padding-left: 0;
       padding-right: 0;
-      width: 48.5%;
+      width: 31.33333%;
       margin-left: 0%;
-      margin-right: 3%;
-      background-color: pink; }
+      margin-right: 3%; }
       article header .social:before, article header .social:after {
         content: '';
         display: table; }

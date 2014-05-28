@@ -6,6 +6,12 @@
 // Variables come here
 $map_blue: #141823;
 
+
+*{
+	margin:0;
+	padding:0;
+}
+
 body{
 	background: url('geometry.png');
 }
@@ -29,6 +35,10 @@ nav{
 	}
 }
 
+.left, .right{
+	margin-top: 48px;
+}
+
 aside {
 	@include col(1/4);
   font-family: 'Merriweather Sans', sans-serif;
@@ -36,10 +46,8 @@ aside {
   section{
   	margin-bottom: 12px;
   }
-
   .map{
     text-align: right;
-    padding-right: 12px;
 
     header{
       color: $map_blue;
@@ -58,8 +66,13 @@ aside {
       margin:0;
       font-size: 12px;
     }
-
   }
+
+	.widget{
+		@extend .map;
+		text-align: left;
+	}
+
 }
 
 article {
@@ -72,14 +85,14 @@ article {
 	header{
 		text-align: center;
 		font-family: 'Merriweather', serif;
-		margin-top: 96px;
+		margin-top: 48px;
 	  h1{
 			font-size: 24px;
 			margin:0px
 	  }
 		img{
 		  @include border-radius(100%);
-			max-width: 25%;
+			max-width: 20%;
 			height: auto;
 		}
 		p{
@@ -91,8 +104,7 @@ article {
 
 		.social{
 			@include center;
-			@include col(1/2);
-			background-color: pink;
+			@include col(1/3);
 		}
 	}
 
