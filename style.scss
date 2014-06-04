@@ -37,9 +37,8 @@ body{
 			display: none;
 		}
 		img{
-			@include border-radius(0.125em);
-			max-width: 1.5em;
-			height: auto;
+		 // we arent loading images but hiding
+		 // right now
 		}
 	}
 
@@ -80,18 +79,22 @@ body{
 
 		.social{
 			@include center;
+			font-size: 0.9em;
 			div{
+				padding: 1em 0;
 				@include span(1/3);
 				margin:0;
 				text-align: center;
+				border-bottom: solid 0.25em red;
 				a{
 					text-decoration: none;
-					color: gray;
+					color: $map_blue;
 				}
 			}
-			div:hover{
+			.active, div:hover{
 				background-color: $map_blue;
-				a:hover{
+				border-bottom: solid 0.25em $map_blue;
+				a{
 					color:white;
 				}
 			}
@@ -100,7 +103,6 @@ body{
 
 	  .feed{
 	    @include col(1);
-	  	margin-top: 1em;
 	  	background-color: $map_blue;
 			text-align:left;
 	  	ul{
