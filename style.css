@@ -19,7 +19,7 @@
 body {
   background: url("geometry.png"); }
 
-@media screen and (min-width: 20em) {
+@media screen and (min-width: 0em) {
   nav {
     *zoom: 1;
     float: left;
@@ -42,10 +42,13 @@ body {
       margin-right: 0%; }
     nav aside {
       display: none; }
-    nav article {
-      display: none; }
+    nav article input {
+      width: 100%;
+      height: 1.5em;
+      border-style: none; }
 
   article {
+    box-shadow: inset 0 0 0.125em 0 #141823;
     *zoom: 1;
     width: auto;
     max-width: 1410px;
@@ -66,9 +69,7 @@ body {
     margin-left: 0%;
     margin-right: 3%;
     color: #141823;
-    font-family: "Raleway", sans-serif;
-    background-color: white;
-    box-shadow: inset 0 0 0.125em 0 #141823; }
+    font-family: "Raleway", sans-serif; }
     article:before, article:after {
       content: '';
       display: table; }
@@ -131,12 +132,10 @@ body {
         padding-left: 0;
         padding-right: 0;
         text-align: inherit;
-        width: 33.33333%;
+        width: 100%;
         margin-left: 0%;
         margin-right: 0%;
-        margin: 0;
-        text-align: center;
-        border-bottom: solid 0.25em red; }
+        text-align: center; }
         article .social div:before, article .social div:after {
           content: '';
           display: table; }
@@ -146,8 +145,7 @@ body {
           text-decoration: none;
           color: #141823; }
       article .social .active, article .social div:hover {
-        background-color: #141823;
-        border-bottom: solid 0.25em #141823; }
+        background-color: #141823; }
         article .social .active a, article .social div:hover a {
           color: white; }
     article .feed {
@@ -181,3 +179,24 @@ body {
 
   aside {
     display: none; } }
+@media screen and (min-width: 20em) {
+  article .social div {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: inherit;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: 0%;
+    text-align: center;
+    border-bottom: solid 0.25em red; }
+    article .social div:before, article .social div:after {
+      content: '';
+      display: table; }
+    article .social div:after {
+      clear: both; }
+  article .social .active, article .social div:hover {
+    border-bottom: solid 0.25em #141823; } }

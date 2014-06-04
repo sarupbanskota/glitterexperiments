@@ -24,7 +24,9 @@ body{
           border-radius: $radius;
 }
 
-@media screen and (min-width: 20em){
+// for all devices lower than 20em in width
+@media screen and (min-width: 0em){
+
 	nav{
 	  @include col(1);
 	  padding: 0.25em auto;
@@ -34,21 +36,25 @@ body{
 			display: none;
 		}
 		article{
-			display: none;
+			input{ 
+				width: 100%;
+				height: 1.5em;
+				border-style: none;
+			}
+
 		}
 		img{
-		 // we arent loading images but hiding
+		 // we are loading images but hiding
 		 // right now
 		}
 	}
 
 	article{
+	  box-shadow:inset 0 0 0.125em 0 $map_blue;
 		@include center;
 		@include col(1);
 		color:$map_blue;
 		font-family: $raleway;
-		background-color: white;
-	  box-shadow:inset 0 0 0.125em 0 $map_blue;
 
 		header{
 			text-align: center;
@@ -82,10 +88,8 @@ body{
 			font-size: 0.9em;
 			div{
 				padding: 1em 0;
-				@include span(1/3);
-				margin:0;
+				@include span(1);
 				text-align: center;
-				border-bottom: solid 0.25em red;
 				a{
 					text-decoration: none;
 					color: $map_blue;
@@ -93,7 +97,6 @@ body{
 			}
 			.active, div:hover{
 				background-color: $map_blue;
-				border-bottom: solid 0.25em $map_blue;
 				a{
 					color:white;
 				}
@@ -118,11 +121,26 @@ body{
 	  }
 	}
 
-
   aside{
   	display: none;
   }
 
+}
+
+@media screen and (min-width: 20em){
+
+	article{
+		.social{
+			div{
+				@include span(1/3);
+				text-align: center;
+				border-bottom: solid 0.25em red;
+			}
+			.active, div:hover{
+				border-bottom: solid 0.25em $map_blue;
+			}
+		}
+	}
 
 }
 
