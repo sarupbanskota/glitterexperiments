@@ -2,25 +2,25 @@
 <html lang="en-us">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GlitterGallery!</title>
-  <link rel="stylesheet" href="main.css">
+
+  <link rel="stylesheet" type="text/css" href="style.css"  />
+
 </head>
   <body>
     <div id="wrapper">
 
       <nav>
-        <aside><img src="logo.svg"></aside>
-        <article>search box</article>
-        <aside>
-          <img src="sarup.jpg">
-          sarupbanskota
-        </aside>
+        <aside class="left"><img src="logo.svg"></aside>
+        <article><input type="text" name="search" placeholder="  Search"></input></article>
+        <aside class="right"><img src="sarup.jpg">sarupbanskota</aside>
       </nav>
 
       <!-- Use left asides for Navigation help -->
-      <aside class="left"> 
+      <aside class="map left"> 
 
-        <section class="map">
+        <section>
           <header>GLITTERPOSTS</header>
           <ul>
             <li><a href="#"> New Glitterpost </a></li>
@@ -29,7 +29,7 @@
           </ul>
         </section>
 
-        <section class="map">
+        <section>
           <header>GLITTERPOSTS</header>
           <ul>
             <li><a href="#"> New Glitterpost </a></li>
@@ -38,7 +38,7 @@
           </ul>
         </section>
 
-        <section class="map">
+        <section>
           <header>GLITTERPOSTS</header>
           <ul>
             <li><a href="#"> New Glitterpost </a></li>
@@ -47,7 +47,7 @@
           </ul>
         </section>
 
-        <section class="map">
+        <section>
           <header>GLITTERPOSTS</header>
           <ul>
             <li><a href="#"> New Glitterpost </a></li>
@@ -56,7 +56,7 @@
           </ul>
         </section>
 
-        <section class="map">
+        <section>
           <header>GLITTERPOSTS</header>
           <ul>
             <li><a href="#"> New Glitterpost </a></li>
@@ -65,7 +65,7 @@
           </ul>
         </section>
 
-        <section class="map">
+        <section>
           <header>GLITTERPOSTS</header>
           <ul>
             <li><a href="#"> New Glitterpost </a></li>
@@ -83,19 +83,15 @@
         <header>
           <img src="sarup.jpg">
           <h1>Sarup Banskota</h1>
-          <p>@SarupBanskota</p>
+          <h2>@SarupBanskota</h2>
           <p>currently building designer nirvana</p>
-
-          <p class="social">
-            85 Projects
-          </p>
-          <p class="social">
-            40 Followers
-          </p>
-          <p class="social">
-            40000 Following
-          </p>
         </header>
+
+        <section class="social">
+          <p><a href="#">85 Projects</a></p>
+          <p><a href="#">40 Followers</a></p>
+          <p><a href="#">4000 Following</a></p>
+        </section>
 
         <section class="feed">
           <ul>
@@ -123,8 +119,8 @@
       </article> <!-- close central article -->
 
       <!-- Use right aside for widgets: created & styled uniquely -->
-      <aside class="right">  
-        <section class="widget">
+      <aside class="right widget">  
+        <section>
           <header>PUBLIC PROJECTS</header>
           <ul>
             <li> Helloworld </li>
@@ -133,7 +129,7 @@
           </ul>
         </section>
 
-        <section class="widget">
+        <section>
           <header>PRIVATE PROJECTS</header>
           <ul>
             <li> Helloworld </li>

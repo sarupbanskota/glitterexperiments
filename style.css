@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Merriweather:900|Merriweather+Sans);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,300,700);
 /*  Syntax Quick Reference
   --------------------------
   column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
@@ -30,6 +30,8 @@ nav {
   width: 100%;
   margin-left: 0%;
   margin-right: 3%;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
   background-color: #141823; }
   nav:before, nav:after {
     content: '';
@@ -38,18 +40,28 @@ nav {
     clear: both; }
   nav:last-child {
     margin-right: 0%; }
+  nav aside {
+    color: gray; }
+  nav article {
+    background-color: #141823; }
+    nav article input {
+      width: 100%;
+      border-style: none; }
   nav img {
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    border-radius: 2px;
-    max-width: 16px;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    border-radius: 10%;
+    max-width: 1.5em;
     height: auto; }
 
-.left, .right {
-  margin-top: 48px; }
-
 aside {
+  display: block;
+  clear: both;
+  float: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   *zoom: 1;
   float: left;
   display: inline;
@@ -60,7 +72,11 @@ aside {
   width: 22.75%;
   margin-left: 0%;
   margin-right: 3%;
-  font-family: 'Merriweather Sans', sans-serif; }
+  font-family: "Raleway", sans-serif; }
+  aside:first-child {
+    margin-left: auto; }
+  aside:last-child {
+    margin-right: auto; }
   aside:before, aside:after {
     content: '';
     display: table; }
@@ -69,23 +85,19 @@ aside {
   aside:last-child {
     margin-right: 0%; }
   aside section {
-    margin-bottom: 12px; }
-  aside .map, aside .widget {
-    text-align: right; }
-    aside .map header, aside .widget header {
-      color: #141823;
-      font-weight: bold;
-      font-size: 12px; }
-    aside .map a, aside .widget a {
+    margin-bottom: 1em; }
+    aside section header {
+      color: gray;
+      font-weight: 300;
+      font-size: 0.75em; }
+    aside section a {
       text-decoration: none;
       color: #141823; }
-    aside .map ul, aside .widget ul {
+    aside section ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
-      font-size: 12px; }
-  aside .widget {
-    text-align: left; }
+      font-size: 0.8em; }
 
 article {
   *zoom: 1;
@@ -108,8 +120,9 @@ article {
   margin-left: 0%;
   margin-right: 3%;
   color: #141823;
+  font-family: "Raleway", sans-serif;
   background-color: white;
-  box-shadow: inset 0px 0px 0.5px 0px #141823; }
+  box-shadow: inset 0 0 0.125em 0 #141823; }
   article:before, article:after {
     content: '';
     display: table; }
@@ -124,11 +137,16 @@ article {
     margin-right: 0%; }
   article header {
     text-align: center;
-    font-family: 'Merriweather', serif;
-    margin-top: 48px; }
+    margin-top: 3em; }
     article header h1 {
-      font-size: 24px;
-      margin: 0px; }
+      font-size: 1.5em;
+      font-weight: 700;
+      margin: 0; }
+    article header h2 {
+      font-size: 1em;
+      font-weight: 300;
+      color: gray;
+      margin: 0; }
     article header img {
       -webkit-border-radius: 100%;
       -moz-border-radius: 100%;
@@ -138,41 +156,47 @@ article {
       height: auto; }
     article header p {
       padding: 0;
-      margin: 2px auto;
-      font-family: 'Merriweather Sans', sans-serif;
-      font-size: 18px; }
-    article header .social {
-      *zoom: 1;
-      width: auto;
-      max-width: 1410px;
-      float: none;
-      display: block;
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: 0;
-      padding-right: 0;
+      margin: 0.5em auto;
+      font-weight: 300;
+      font-size: 1em; }
+  article .social {
+    *zoom: 1;
+    width: auto;
+    max-width: 1410px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    font-weight: 100; }
+    article .social:before, article .social:after {
+      content: '';
+      display: table; }
+    article .social:after {
+      clear: both; }
+    article .social p {
       *zoom: 1;
       float: left;
       display: inline;
       clear: none;
-      text-align: inherit;
       padding-left: 0;
       padding-right: 0;
-      width: 31.33333%;
+      text-align: inherit;
+      width: 33.33333%;
       margin-left: 0%;
-      margin-right: 3%; }
-      article header .social:before, article header .social:after {
+      margin-right: 0%;
+      margin: 0; }
+      article .social p:before, article .social p:after {
         content: '';
         display: table; }
-      article header .social:after {
+      article .social p:after {
         clear: both; }
-      article header .social:before, article header .social:after {
-        content: '';
-        display: table; }
-      article header .social:after {
-        clear: both; }
-      article header .social:last-child {
-        margin-right: 0%; }
+      article .social p a {
+        text-decoration: none;
+        color: gray; }
+    article .social p:hover {
+      background-color: orange; }
   article .feed {
     *zoom: 1;
     float: left;
@@ -184,8 +208,9 @@ article {
     width: 100%;
     margin-left: 0%;
     margin-right: 3%;
-    margin-top: 24px;
-    background-color: #141823; }
+    margin-top: 1em;
+    background-color: #141823;
+    text-align: left; }
     article .feed:before, article .feed:after {
       content: '';
       display: table; }
@@ -195,13 +220,18 @@ article {
       margin-right: 0%; }
     article .feed ul {
       list-style-type: none;
-      padding: 24px;
-      margin: 0;
-      font-size: 14px;
+      padding: 1em;
+      font-size: 1em;
       color: white;
-      font-family: 'Merriweather Sans', sans-serif; }
+      font-family: "Raleway", sans-serif; }
     article .feed a {
       text-decoration: none; }
 
-.feed {
+.left, .right {
+  text-align: right; }
+
+.right {
   text-align: left; }
+
+.center {
+  text-align: center; }
