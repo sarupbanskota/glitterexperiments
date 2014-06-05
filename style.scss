@@ -5,6 +5,7 @@
 
 // Variables come here
 $map_blue: #141823;
+$geometry_blue: #f9fafb;
 $raleway: 'Raleway', sans-serif;
 
 
@@ -13,9 +14,6 @@ $raleway: 'Raleway', sans-serif;
 	padding:0;
 }
 
-body{
-	background: url('geometry.png');
-}
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -26,6 +24,11 @@ body{
 
 // for all devices lower than 20em in width
 @media screen and (min-width: 0em){
+
+
+	body{
+		background-color: $geometry_blue;
+	}
 
 	nav{
 	  @include col(1);
@@ -41,7 +44,6 @@ body{
 				height: 1.5em;
 				border-style: none;
 			}
-
 		}
 		img{
 		 // we are loading images but hiding
@@ -129,6 +131,10 @@ body{
 
 @media screen and (min-width: 20em){
 
+	body{
+		background: url('geometry.png');
+	}
+
 	article{
 		.social{
 			div{
@@ -141,6 +147,80 @@ body{
 			}
 		}
 	}
+
+}
+
+@media screen and (min-width: 40.063em){
+	nav{
+	  padding-top:0.25em;
+	  padding-bottom:0.25em;
+	  aside{
+	  	display: initial;
+	  	color: gray;
+	  	font-weight: 300;
+	  }
+		img{
+			max-width: 1.2em;
+		}
+	}
+
+
+	aside {
+		@include col(1/4);
+	  font-family: $raleway;
+
+	  section{
+	  	@include border-radius(2.5%);
+	  	width: 70%;
+	  	box-shadow:inset 0 0 0.125em 0 $map_blue;
+	  	background-color: white;
+	  	margin-top: 0.5em;
+	  	padding: 0.5em;
+	    header{
+	    	background-color: $geometry_blue;
+	      color: $map_blue;
+	      font-weight:700;
+	      font-size:0.75em;
+	    }
+	    a{
+		    text-decoration:none;
+		    color: $map_blue;
+	    }
+	    a:hover{
+	    	font-weight: 700;
+	    	color: gray;
+	    }
+
+	    ul{
+	      list-style-type: none;
+	      padding: 0;
+	      margin: 0;
+	      font-size: 0.8em;
+	    }
+	  }
+	}
+
+	article {
+		@include center;
+		@include col(3/4);
+	}
+
+	.left{
+		display:none;
+	}
+
+	.right{
+		text-align: left;
+	}
+
+	.center{
+		text-align:center;
+	}
+
+  .widget{
+  	margin-top: 2.5em;
+  }
+
 
 }
 
