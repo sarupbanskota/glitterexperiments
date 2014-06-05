@@ -22,9 +22,9 @@ $raleway: 'Raleway', sans-serif;
           border-radius: $radius;
 }
 
-// for all devices lower than 20em in width
-@media screen and (min-width: 0em){
+// smaller phones
 
+@media screen and (min-width: 0em){
 
 	body{
 		background-color: $geometry_blue;
@@ -39,7 +39,7 @@ $raleway: 'Raleway', sans-serif;
 			display: none;
 		}
 		article{
-			input{ 
+			input{ 	
 				width: 100%;
 				height: 1.5em;
 				border-style: none;
@@ -60,7 +60,7 @@ $raleway: 'Raleway', sans-serif;
 
 		header{
 			text-align: center;
-			margin-top: 3em;
+			margin-top: 2em;
 		  h1{
 				font-size: 1.5em;
 				font-weight: 700;
@@ -129,6 +129,8 @@ $raleway: 'Raleway', sans-serif;
 
 }
 
+// potrait smartphones
+
 @media screen and (min-width: 20em){
 
 	body{
@@ -147,14 +149,17 @@ $raleway: 'Raleway', sans-serif;
 			}
 		}
 	}
-
 }
 
-@media screen and (min-width: 40.063em){
+// potrait smartphones
+
+
+@media screen and (min-width: 60.063em){
 	nav{
 	  padding-top:0.25em;
 	  padding-bottom:0.25em;
 	  aside{
+	  	margin-right: 0;
 	  	display: initial;
 	  	color: gray;
 	  	font-weight: 300;
@@ -164,45 +169,15 @@ $raleway: 'Raleway', sans-serif;
 		}
 	}
 
-
 	aside {
 		@include col(1/4);
 	  font-family: $raleway;
-
-	  section{
-	  	@include border-radius(2.5%);
-	  	width: 70%;
-	  	box-shadow:inset 0 0 0.125em 0 $map_blue;
-	  	background-color: white;
-	  	margin-top: 0.5em;
-	  	padding: 0.5em;
-	    header{
-	    	background-color: $geometry_blue;
-	      color: $map_blue;
-	      font-weight:700;
-	      font-size:0.75em;
-	    }
-	    a{
-		    text-decoration:none;
-		    color: $map_blue;
-	    }
-	    a:hover{
-	    	font-weight: 700;
-	    	color: gray;
-	    }
-
-	    ul{
-	      list-style-type: none;
-	      padding: 0;
-	      margin: 0;
-	      font-size: 0.8em;
-	    }
-	  }
 	}
 
 	article {
 		@include center;
 		@include col(3/4);
+		background-color: $geometry_blue;
 	}
 
 	.left{
@@ -218,10 +193,125 @@ $raleway: 'Raleway', sans-serif;
 	}
 
   .widget{
-  	margin-top: 2.5em;
+  	margin-top: 1.5em;
+
+	  section{
+	  	@include border-radius(2.5%);
+	  	width: 80%;
+	  	box-shadow:inset 0 0 0.125em 0 $map_blue;
+	  	background-color: white;
+	  	margin-top: 0.5em;
+	  	padding: 0.5em;
+	  	span.new{
+	  		display: none;
+	  	}
+	    header{
+	    	background-color: $geometry_blue;
+	      color: $map_blue;
+	      font-weight:700;
+	      font-size:0.75em;
+	      margin-bottom: 0.25em;
+	    }
+	    a{
+		    text-decoration:none;
+		    color: $map_blue;
+	    }
+	    a:hover{
+	    	font-weight: 700;
+	    }
+
+	    ul{
+	      list-style-type: none;
+	      padding: 0;
+	      margin: 0;
+	      font-size: 0.8em;
+	    }
+	  }
   }
+}
 
+// desktops and bigger tablets
 
+@media screen and (min-width: 64.063em){
+
+	nav{
+		aside.left{
+			img{
+				padding-right: 2em;
+			}
+		}
+	}
+
+	article{
+		@include col(1/2);
+		background-color: white;
+		header{
+			margin-top: 3em;
+		}
+	}
+	.left{
+		display: initial;
+		text-align: right;
+	}
+
+	.map{
+		padding-top: 2.5em;
+	 	margin-right: 0;
+	 	min-height: 100%;
+	  background-color: $geometry_blue;
+		section{
+			padding-right: 2em;
+			padding-bottom: 0.5em;
+	    header{
+	      color: $map_blue;
+	      font-weight:700;
+	      font-size:0.75em;
+	      margin-bottom: 0.25em;
+	    }
+	    a{
+		    text-decoration:none;
+		    color: $map_blue;
+	    }
+	    a:hover{
+	    	font-weight: 700;
+	    }
+
+	    ul{
+	      list-style-type: none;
+	      padding: 0;
+	      margin: 0;
+	      font-size: 0.8em;
+				span.count{
+					display: inline-block;
+					min-width: 1.5em;
+					text-align: center;
+					color: white;
+					font-family: $raleway;
+					font-size: 0.75em;
+					font-weight: 700;
+					background-color: gray;
+				}
+	    }
+		}
+	}
+
+	.widget{
+		section{
+			span.new{
+				display: initial;
+				color: red;
+				font-family: $raleway;
+				font-size: 0.75em;
+				font-weight: 700;
+				padding: 0.05em;
+				background-color: pink;
+				@include border-radius(1%);
+			}
+
+		}
+	}
+
+	
 }
 
 
