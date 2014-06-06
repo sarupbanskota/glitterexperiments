@@ -383,3 +383,60 @@
     -moz-border-radius: 1%;
     -ms-border-radius: 1%;
     border-radius: 1%; } }
+@media screen and (min-width: 0em) {
+  .login header {
+    padding: 1em;
+    background-color: #141823; }
+    .login header h1 {
+      font-size: 2.5em;
+      color: white; }
+    .login header h2 {
+      color: #f9fafb;
+      font-size: 1.5em; }
+  .login section.email {
+    background-color: yellow;
+    *zoom: 1;
+    width: auto;
+    max-width: 1410px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%; }
+    .login section.email:before, .login section.email:after {
+      content: '';
+      display: table; }
+    .login section.email:after {
+      clear: both; }
+    .login section.email:before, .login section.email:after {
+      content: '';
+      display: table; }
+    .login section.email:after {
+      clear: both; }
+    .login section.email:last-child {
+      margin-right: 0%; }
+    .login section.email input {
+      width: 100%;
+      border-style: none;
+      border-bottom: solid 0.5px #141823;
+      font-family: "Raleway", sans-serif;
+      font-size: 1em;
+      text-align: center; }
+    .login section.email button {
+      color: white;
+      border-style: none;
+      background-color: #141823;
+      font-family: "Raleway", sans-serif;
+      font-size: 1em;
+      width: 100%; } }
