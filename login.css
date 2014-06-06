@@ -385,6 +385,7 @@
     border-radius: 1%; } }
 @media screen and (min-width: 0em) {
   .login header {
+    margin-top: 0;
     padding: 1em;
     background-color: #141823; }
     .login header h1 {
@@ -448,19 +449,23 @@
         display: table; }
       .login form .button:after {
         clear: both; }
-  .login div.fb img {
-    *zoom: 1;
-    width: auto;
-    max-width: 1410px;
-    float: none;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 6em; }
-    .login div.fb img:before, .login div.fb img:after {
-      content: '';
-      display: table; }
-    .login div.fb img:after {
-      clear: both; } }
+  .login div.socialauth {
+    margin-top: 6.5em; }
+    .login div.socialauth img {
+      *zoom: 1;
+      width: auto;
+      max-width: 1410px;
+      float: none;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 0.5em;
+      width: 60%;
+      height: auto; }
+      .login div.socialauth img:before, .login div.socialauth img:after {
+        content: '';
+        display: table; }
+      .login div.socialauth img:after {
+        clear: both; } }

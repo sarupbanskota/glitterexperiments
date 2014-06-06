@@ -2,11 +2,9 @@
 
 @media screen and (min-width: 0em){
 
-	article{
-
-	}
 	.login{
 		header{
+			margin-top: 0;
 			padding: 1em;
 			background-color: $map_blue;
 			h1{
@@ -48,10 +46,14 @@
 				padding: 0.5em;
 			}
 		}
-		div.fb{
+		div.socialauth{
+			margin-top: 6.5em;
 			img{
 				@include center;
-				margin-top: 6em;
+				margin-top: 0.5em;
+				width: 60%;
+				height: auto;
+
 			}
 		}
 	}
