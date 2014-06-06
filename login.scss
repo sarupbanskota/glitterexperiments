@@ -18,11 +18,14 @@
 				font-size: 1.5em;
 			}
 		}
-		section.email{
-			background-color: yellow;
+		form{
 			@include center;
-			@include col(1);
+			width: 80%;
+			padding: 0.5em;
+			height: 2em;
 			input{
+				display: inline-block;
+				height: 120%;
 				width: 100%;
 				border-style: none;
 				border-bottom: solid 0.5px $map_blue;
@@ -31,13 +34,24 @@
 				text-align: center;
 
 			}
-			button{
+			.button{
+				margin-top: 0.25em;
 				color: white;
-				border-style: none;
+				@include center;
+				text-align: center;
+				@include border-radius(2.5%);
 				background-color: $map_blue;
 				font-family: $raleway;
 				font-size: 1em;
-				width: 100%;
+				width: 95%;
+				height: 1.5em;
+				padding: 0.5em;
+			}
+		}
+		div.fb{
+			img{
+				@include center;
+				margin-top: 6em;
 			}
 		}
 	}

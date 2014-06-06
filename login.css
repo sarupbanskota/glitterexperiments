@@ -393,8 +393,7 @@
     .login header h2 {
       color: #f9fafb;
       font-size: 1.5em; }
-  .login section.email {
-    background-color: yellow;
+  .login form {
     *zoom: 1;
     width: auto;
     max-width: 1410px;
@@ -404,39 +403,64 @@
     margin-left: auto;
     padding-left: 0;
     padding-right: 0;
-    *zoom: 1;
-    float: left;
-    display: inline;
-    clear: none;
-    text-align: inherit;
-    padding-left: 0;
-    padding-right: 0;
-    width: 100%;
-    margin-left: 0%;
-    margin-right: 3%; }
-    .login section.email:before, .login section.email:after {
+    width: 80%;
+    padding: 0.5em;
+    height: 2em; }
+    .login form:before, .login form:after {
       content: '';
       display: table; }
-    .login section.email:after {
+    .login form:after {
       clear: both; }
-    .login section.email:before, .login section.email:after {
-      content: '';
-      display: table; }
-    .login section.email:after {
-      clear: both; }
-    .login section.email:last-child {
-      margin-right: 0%; }
-    .login section.email input {
+    .login form input {
+      display: inline-block;
+      height: 120%;
       width: 100%;
       border-style: none;
       border-bottom: solid 0.5px #141823;
       font-family: "Raleway", sans-serif;
       font-size: 1em;
       text-align: center; }
-    .login section.email button {
+    .login form .button {
+      margin-top: 0.25em;
       color: white;
-      border-style: none;
+      *zoom: 1;
+      width: auto;
+      max-width: 1410px;
+      float: none;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+      -webkit-border-radius: 2.5%;
+      -moz-border-radius: 2.5%;
+      -ms-border-radius: 2.5%;
+      border-radius: 2.5%;
       background-color: #141823;
       font-family: "Raleway", sans-serif;
       font-size: 1em;
-      width: 100%; } }
+      width: 95%;
+      height: 1.5em;
+      padding: 0.5em; }
+      .login form .button:before, .login form .button:after {
+        content: '';
+        display: table; }
+      .login form .button:after {
+        clear: both; }
+  .login div.fb img {
+    *zoom: 1;
+    width: auto;
+    max-width: 1410px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 6em; }
+    .login div.fb img:before, .login div.fb img:after {
+      content: '';
+      display: table; }
+    .login div.fb img:after {
+      clear: both; } }
