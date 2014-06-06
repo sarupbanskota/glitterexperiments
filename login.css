@@ -235,7 +235,6 @@
       margin-right: 0%; }
 
   article {
-    box-shadow: inset 0 0 0.125em 0 #141823;
     *zoom: 1;
     width: auto;
     max-width: 1410px;
@@ -396,6 +395,16 @@
       font-size: 1.5em; }
   .login form {
     *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+    *zoom: 1;
     width: auto;
     max-width: 1410px;
     float: none;
@@ -412,6 +421,13 @@
       display: table; }
     .login form:after {
       clear: both; }
+    .login form:last-child {
+      margin-right: 0%; }
+    .login form:before, .login form:after {
+      content: '';
+      display: table; }
+    .login form:after {
+      clear: both; }
     .login form input {
       display: inline-block;
       height: 120%;
@@ -421,6 +437,8 @@
       font-family: "Raleway", sans-serif;
       font-size: 1em;
       text-align: center; }
+    .login form a {
+      text-decoration: none; }
     .login form .button {
       margin-top: 0.25em;
       color: white;
@@ -443,15 +461,26 @@
       font-size: 1em;
       width: 95%;
       height: 1.5em;
-      padding: 0.5em; }
+      padding: 0.5em;
+      -webkit-transition: opacity .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      transition: opacity .25s ease-in-out; }
       .login form .button:before, .login form .button:after {
         content: '';
         display: table; }
       .login form .button:after {
         clear: both; }
+    .login form .button:hover {
+      opacity: 0.9;
+      color: white; }
   .login div.socialauth {
     margin-top: 6.5em; }
+    .login div.socialauth .google, .login div.socialauth .twitter {
+      display: none; }
     .login div.socialauth img {
+      -webkit-transition: opacity .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      transition: opacity .25s ease-in-out;
       *zoom: 1;
       width: auto;
       max-width: 1410px;
@@ -462,10 +491,87 @@
       padding-left: 0;
       padding-right: 0;
       margin-top: 0.5em;
-      width: 60%;
+      width: 15em;
       height: auto; }
       .login div.socialauth img:before, .login div.socialauth img:after {
         content: '';
         display: table; }
       .login div.socialauth img:after {
-        clear: both; } }
+        clear: both; }
+    .login div.socialauth img:hover {
+      opacity: 0.9; } }
+@media screen and (min-width: 20em) {
+  .login header {
+    padding: 3em; } }
+@media screen and (min-width: 40.063em) {
+  .login div.socialauth {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 84.55%;
+    margin-left: 0%;
+    margin-right: 3%;
+    margin: 6.5em 7.5% 0 7.5%; }
+    .login div.socialauth:before, .login div.socialauth:after {
+      content: '';
+      display: table; }
+    .login div.socialauth:after {
+      clear: both; }
+    .login div.socialauth:last-child {
+      margin-right: 0%; }
+    .login div.socialauth .google, .login div.socialauth .twitter {
+      display: initial; }
+    .login div.socialauth section {
+      *zoom: 1;
+      width: auto;
+      max-width: 1410px;
+      float: none;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0;
+      *zoom: 1;
+      float: left;
+      display: inline;
+      clear: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: inherit;
+      width: 33.33333%;
+      margin-left: 0%;
+      margin-right: 0%; }
+      .login div.socialauth section:before, .login div.socialauth section:after {
+        content: '';
+        display: table; }
+      .login div.socialauth section:after {
+        clear: both; }
+      .login div.socialauth section:before, .login div.socialauth section:after {
+        content: '';
+        display: table; }
+      .login div.socialauth section:after {
+        clear: both; }
+      .login div.socialauth section img {
+        width: 11.5em;
+        height: auto; } }
+@media screen and (min-width: 60.063em) {
+  .login div.socialauth section {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: inherit;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%; }
+    .login div.socialauth section:before, .login div.socialauth section:after {
+      content: '';
+      display: table; }
+    .login div.socialauth section:after {
+      clear: both; } }

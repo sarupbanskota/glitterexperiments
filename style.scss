@@ -150,7 +150,7 @@ $raleway: 'Raleway', sans-serif;
 	}
 }
 
-// potrait smartphones
+// potrait tablets
 
 
 @media screen and (min-width: 60.063em){
@@ -174,7 +174,6 @@ $raleway: 'Raleway', sans-serif;
 	}
 
 	article {
-	  box-shadow:inset 0 0 0.125em 0 $map_blue;
 		@include center;
 		@include col(3/4);
 		background-color: $geometry_blue;
