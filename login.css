@@ -431,7 +431,7 @@
   .login {
     min-height: 100vh; }
     .login header {
-      margin-top: 0;
+      margin-top: -1em;
       padding: 1em;
       background-color: #141823; }
       .login header h1 {
