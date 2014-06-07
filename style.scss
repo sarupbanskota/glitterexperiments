@@ -35,9 +35,11 @@ $raleway: 'Raleway', sans-serif;
 		position: fixed;
 	  @include col(1);
 	  background-color: $map_blue;
+	  padding: 0.25em;
 	  div.left{
 			img{
-				max-width: 1.2em;
+				@include border-radius(10%);
+				max-width: 1.5em;
 				height: auto;
 				padding-left: 0.25em;
 			}
@@ -191,7 +193,7 @@ $raleway: 'Raleway', sans-serif;
 				text-align: left;
 				padding: 0.5em;
 				font-size: 0.85em;
-				border-bottom: solid 0.5px red;
+				border-bottom: solid 0.15em red;
 			}
 		}
 		form{
@@ -208,7 +210,7 @@ $raleway: 'Raleway', sans-serif;
 				display: inline-block;
 				border-style: none;
 				background-color: $geometry_gray;
-				border-bottom: solid 0.5px $map_blue;
+				border-bottom: solid 0.125em $map_blue;
 				font-family: $raleway;
 				font-size: 0.85em;
 				text-align: left;
@@ -291,13 +293,14 @@ $raleway: 'Raleway', sans-serif;
 			span{
 				text-align: right;
 				color: $geometry_gray;
-				font-weight: 700;
+				font-weight: 300;
 				font-height: 1.2em;
 				font-family: $raleway;
 			}
 			img{
+				@include border-radius(10%);
 				padding-left: 2em;
-				max-width: 1.2em;
+				max-width: 1.5em;
 				height: auto;
 			}
 		}
