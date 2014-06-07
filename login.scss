@@ -40,23 +40,6 @@
 			}
 			.button{
 				margin-top: 0.25em;
-				color: white;
-				@include center;
-				text-align: center;
-				@include border-radius(2.5%);
-				background-color: $map_blue;
-				font-family: $raleway;
-				font-size: 1em;
-				width: 95%;
-				height: 1.5em;
-				padding: 0.5em;
-				-webkit-transition: opacity .25s ease-in-out;
-					 -moz-transition: opacity .25s ease-in-out;
-					 			transition: opacity .25s ease-in-out;
-			}
-			.button:hover{
-				opacity: 0.9;
-				color: white;
 			}
 		}
 		div.socialauth{
