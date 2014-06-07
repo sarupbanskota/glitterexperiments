@@ -3,6 +3,7 @@
 @media screen and (min-width: 0em){
 
 	.login{
+		min-height: 100vh;
 		header{
 			margin-top: 0;
 			padding: 1em;
@@ -12,7 +13,7 @@
 				color: white;;
 			}
 			h2{
-				color: $geometry_blue;
+				color: $geometry_gray;
 				font-size: 1.5em;
 			}
 		}
