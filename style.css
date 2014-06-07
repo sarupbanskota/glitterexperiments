@@ -339,7 +339,7 @@
     width: 80%;
     box-shadow: inset 0 0 0.125em 0 #141823;
     background-color: white;
-    margin-top: 0.5em;
+    margin-bottom: 1em;
     padding: 0.5em; }
     .widget section span.new {
       display: none; }
@@ -356,9 +356,11 @@
       font-weight: 700; }
     .widget section ul {
       list-style-type: none;
-      padding: 0;
       margin: 0;
-      font-size: 0.8em; } }
+      font-size: 0.8em; }
+      .widget section ul li {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em; } }
 @media screen and (min-width: 64.063em) {
   article {
     *zoom: 1;
@@ -389,7 +391,7 @@
     background-color: #f9fafb; }
     .map section {
       padding-right: 2em;
-      padding-bottom: 0.5em; }
+      margin-bottom: 1em; }
       .map section header {
         color: #141823;
         font-weight: 700;
@@ -414,6 +416,8 @@
           font-size: 0.75em;
           font-weight: 700;
           background-color: gray; }
+        .map section ul li {
+          margin-bottom: 0.5em; }
 
   .widget section span.new {
     display: initial;
