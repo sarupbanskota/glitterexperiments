@@ -7,6 +7,7 @@
 $map_blue: #141823;
 $geometry_gray: #f9fafb;
 $dark_geometry_gray: #f1f1f1;
+$light_green: #c1f0c1;
 $raleway: 'Raleway', sans-serif;
 
 
@@ -22,6 +23,8 @@ $raleway: 'Raleway', sans-serif;
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
+
+
 
 // smaller phones
 
@@ -189,11 +192,23 @@ $raleway: 'Raleway', sans-serif;
 				color: $map_blue;
 				background-color: $dark_geometry_gray;
 			}
+			h1.generated{
+				font-size: 1em;
+			}
 			h2{
 				text-align: left;
 				padding: 0.5em;
 				font-size: 0.85em;
 				border-bottom: solid 0.15em red;
+				span.badge{
+					@include border-radius(10%);
+					padding: 0.15em;
+					font-size: 0.70em;
+				}
+				.author{
+					background-color: $light_green;
+					color: green;
+				}
 			}
 		}
 		form{
@@ -269,7 +284,7 @@ $raleway: 'Raleway', sans-serif;
 					margin: 0.25em;
 				}
 				p.recommended{
-					background-color: #c1f0c1;
+					background-color: $light_green;
 	  			box-shadow:inset 0 0 0.125em 0 green;
 					color: green;
 				}
@@ -324,6 +339,14 @@ $raleway: 'Raleway', sans-serif;
 	article {
 		@include center;
 		@include span(3/4);
+	}
+
+	article.general{
+		header{
+			h1.generated{
+				font-size: 1.5em;
+			}		
+		}
 	}
 
 	.left{

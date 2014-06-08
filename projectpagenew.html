@@ -5,10 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GlitterGallery!</title>
 
-  <link rel="stylesheet" type="text/css" href="login.css"  />
+  <link rel="stylesheet" type="text/css" href="style.css"  />
 
 </head>
   <body>
+
+    <nav>
+      <div class="left">
+        <img src="logo.svg">
+        <input type="text" name="search" placeholder="Search"></input>
+      </div>
+      <div class="right"> <img src="sarup.jpg"><span class="username">sarupbanskota</span></div>
+    </nav>
+      
     <div id="wrapper">
 
       <aside class="map left"> 
@@ -29,31 +38,20 @@
 
       <!-- Use article for central content -->
 
-      <article class="login">
+      <article class="general">
 
         <header>
-          <h1>GlitterGallery</h1>
-          <h2>The open source pixelpub where awesome designers hangout.</h2>
+          <h1 class="generated">sarupbanskota/Helloworld</h1>
+          <h2><span class="badge author">AUTHOR</span></h2>
         </header>
 
-        <form>
-          <input type="email" placeholder="Your email" label></input>
-          <input type="password" placeholder="Your password"></input>
-          <a href="welcome.html"><p class="button">Login</p></a>
-        </form>
-
-        <div class="socialauth">
-          <section class="facebook">
-            <a href=""><img src="images/g_login_large.png"></a>
-          </section>
-          <section class="google">
-            <a href=""><img src="images/g_login_large.png"></a>
-          </section>
-          <section class="twitter" >
-            <a href=""><img src="images/g_login_large.png"></a>
-          </section>
-
-        </div>        
+        <section class="guide">
+          <div>
+            <p> Woot! Did you notice that you've been awared an author badge? You'll earn more badges as you add files to your project. You can also doodle from within your browser! </p>
+            <a href="userpage.html"><p class="button">Add first file</p></a>
+          </div>
+        </section>  
+  
 
       </article> <!-- close central article -->
 

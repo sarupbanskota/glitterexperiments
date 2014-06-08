@@ -267,11 +267,23 @@
     text-align: left;
     color: #141823;
     background-color: #f1f1f1; }
+  article.general header h1.generated {
+    font-size: 1em; }
   article.general header h2 {
     text-align: left;
     padding: 0.5em;
     font-size: 0.85em;
     border-bottom: solid 0.15em red; }
+    article.general header h2 span.badge {
+      -webkit-border-radius: 10%;
+      -moz-border-radius: 10%;
+      -ms-border-radius: 10%;
+      border-radius: 10%;
+      padding: 0.15em;
+      font-size: 0.70em; }
+    article.general header h2 .author {
+      background-color: #c1f0c1;
+      color: green; }
   article.general form {
     padding-top: 2em;
     background-color: #f9fafb;
@@ -473,6 +485,9 @@
       display: table; }
     article:after {
       clear: both; }
+
+  article.general header h1.generated {
+    font-size: 1.5em; }
 
   .left {
     display: none; }
