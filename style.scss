@@ -14,6 +14,7 @@ $raleway: 'Raleway', sans-serif;
 *{
 	margin:0;
 	padding:0;
+	font-family: $raleway;
 }
 
 
@@ -24,6 +25,30 @@ $raleway: 'Raleway', sans-serif;
           border-radius: $radius;
 }
 
+//remove excess fonnt bckgcolo etc
+
+.button{
+	color: white;
+	@include center;
+	text-align: center;
+	@include border-radius(2.5%);
+	background-color: $map_blue;
+	font-size: 1em;
+	height: 1.5em;
+	padding: 0.5em;
+	margin: 1em;
+	-webkit-transition: opacity .25s ease-in-out;
+		 -moz-transition: opacity .25s ease-in-out;
+		 			transition: opacity .25s ease-in-out;
+}
+.button:hover{
+	opacity: 0.9;
+}
+.recommended{
+	background-color: $light_green;
+	box-shadow:inset 0 0 0.125em 0 green;
+	color: green;
+}
 
 
 // smaller phones
@@ -39,18 +64,14 @@ $raleway: 'Raleway', sans-serif;
 	  @include col(1);
 	  background-color: $map_blue;
 	  padding: 0.25em;
-	  div.left{
+	  div{
 			img{
 				@include border-radius(10%);
 				max-width: 1.5em;
 				height: auto;
 				padding-left: 0.25em;
 			}
-			input{ 	
-				display: none;
-			}
 	  }
-
 		div.right{
 			display: none;
 		}
@@ -58,36 +79,65 @@ $raleway: 'Raleway', sans-serif;
 
 	.wrapper{
 		min-height: 100vh;
-		background-color: $dark_geometry_gray;
-	}
-
-	.button{
-		color: white;
-		@include center;
-		text-align: center;
-		@include border-radius(2.5%);
-		background-color: $map_blue;
-		font-family: $raleway;
-		font-size: 1em;
-		height: 1.5em;
-		padding: 0.5em;
-		margin: 1em;
-		-webkit-transition: opacity .25s ease-in-out;
-			 -moz-transition: opacity .25s ease-in-out;
-			 			transition: opacity .25s ease-in-out;
-	}
-	.button:hover{
-		opacity: 0.9;
-		color: white;
 	}
 
 	article{
-		margin-top: 1em;
 		@include center;
 		@include col(1);
 		color:$map_blue;
 		background-color: white;
-		font-family: $raleway;
+		min-height: 100vh;
+
+		header{
+			margin-top: 2.25em;
+			h1{
+				padding: 0.25em;
+				text-align: left;
+				color: $map_blue;
+				background-color: $dark_geometry_gray;
+			}
+			h1.generated{
+				font-size: 1em;
+			}
+			h2{
+				text-align: left;
+				padding: 0.5em;
+				font-size: 0.85em;
+				font-weight: 300;
+				border-bottom: solid 0.15em red;
+				a{
+					text-decoration: underline;
+					color: $map_blue;
+				}
+			}
+		}
+
+		form{
+			padding-top: 2em;
+			background-color: $geometry_gray;
+			@include col(1);
+			p{
+				padding: 0.5em;
+				text-align: left;
+				font-size: 0.8em;
+			}
+			input[type="text"]{
+				margin: 0.5em;
+				display: inline-block;
+				border-style: none;
+				background-color: $geometry_gray;
+				border-bottom: solid 0.125em $map_blue;
+				font-size: 0.85em;
+				text-align: left;
+			}
+			p.button{
+				margin: 0.5em;
+				text-align: center;
+			}
+			a{
+				text-decoration: none;
+			}
+		}
 
 		.guide{
 			@include span(1);
@@ -104,71 +154,19 @@ $raleway: 'Raleway', sans-serif;
 					margin: 1em;
 				}
 				a{
-					text-decoration:none;
-				}
-			}
-		}
-
-
-		header{
-			text-align: center;
-			margin-top: 2em;
-		  h1{
-				font-size: 1.5em;
-				font-weight: 700;
-				margin:0;
-		  }
-		  h2{
-		  	font-size: 1em;
-		  	font-weight: 300;
-		  	color: gray;
-		  	margin: 0;
-		  }
-			img{
-			  @include border-radius(100%);
-				max-width: 20%;
-				height: auto;
-			}
-			p{
-				padding: 0;
-				margin: 0.5em auto;
-	  		font-weight: 300;
-				font-size: 1em;
-			}
-		}
-
-
-		.social{
-			@include center;
-			font-size: 0.9em;
-			div{
-				padding: 1em 0;
-				@include span(1);
-				text-align: center;
-				a{
 					text-decoration: none;
-					color: $map_blue;
 				}
 			}
-			.active, div:hover{
-					background-color: $dark_geometry_gray;
-					font-weight: 700;
-				a{
-					color:$map_blue;
-				}
-			}
-			font-weight: 300;
 		}
 
 	  .feed{
 	    @include col(1);
 	  	background-color: $dark_geometry_gray;
-			text-align:left;
+			text-align: left;
 	  	ul{
 	  		list-style-type: none;
 	  		font-size: 0.95em;
 	  		color: $map_blue;
-			  font-family: $raleway;
 			  font-weight: 300;
 	  		padding: 1em;
 			  li{
@@ -183,66 +181,10 @@ $raleway: 'Raleway', sans-serif;
 	  }
 	}
 
-
-	article.general{
-		header{
-			h1{
-				padding: 0.25em;
-				text-align: left;
-				color: $map_blue;
-				background-color: $dark_geometry_gray;
-			}
-			h1.generated{
-				font-size: 1em;
-			}
-			h2{
-				text-align: left;
-				padding: 0.5em;
-				font-size: 0.85em;
-				border-bottom: solid 0.15em red;
-				span.badge{
-					@include border-radius(10%);
-					padding: 0.15em;
-					font-size: 0.70em;
-				}
-				.author{
-					background-color: $light_green;
-					color: green;
-				}
-			}
-		}
-		form{
-			padding-top: 2em;
-			background-color: $geometry_gray;
-			@include col(1);
-			p{
-				padding: 0.5em;
-				text-align: left;
-				font-size: 0.8em;
-			}
-			input[type="text"]{
-				margin: 0.5em;
-				display: inline-block;
-				border-style: none;
-				background-color: $geometry_gray;
-				border-bottom: solid 0.125em $map_blue;
-				font-family: $raleway;
-				font-size: 0.85em;
-				text-align: left;
-			}
-			p.button{
-				margin: 0.5em;
-				text-align: center;
-			}
-			a{
-				text-decoration:none;
-			}
-		}
-	}
-
   aside{
   	display: none;
   }
+
 
 }
 
@@ -250,21 +192,18 @@ $raleway: 'Raleway', sans-serif;
 
 @media screen and (min-width: 20em){
 
-	body{
-		background-color: $geometry_gray;
-	}
-
 	article{
-		.social{
-			div{
-				@include span(1/3);
-				text-align: center;
-				border-bottom: solid 0.25em red;
-			}
-			.active, div:hover{
-				border-bottom: solid 0.25em $map_blue;
+		form{
+			section.decision{
+				padding: 0.25em;
+				p{
+					@include col(1/2);
+					text-align: center;
+					margin: 0.25em;
+				}
 			}
 		}
+
 		.feed{
 			ul{
 	  		padding-top: 1em;
@@ -274,23 +213,6 @@ $raleway: 'Raleway', sans-serif;
 		}
 	}
 
-	article.general{
-		form{
-			section.decision{
-				padding: 0.25em;
-				p{
-					@include col(1/2);
-					text-align: center;
-					margin: 0.25em;
-				}
-				p.recommended{
-					background-color: $light_green;
-	  			box-shadow:inset 0 0 0.125em 0 green;
-					color: green;
-				}
-			}
-		}
-	}
 }
 
 // potrait tablets
@@ -305,48 +227,38 @@ $raleway: 'Raleway', sans-serif;
 		div.right{
 			display: initial;
 			@include span(1/4);
+			img{
+				padding-left: 2em;
+			}
 			span{
 				text-align: right;
 				color: $geometry_gray;
 				font-weight: 300;
 				font-height: 1.2em;
-				font-family: $raleway;
 			}
-			img{
-				@include border-radius(10%);
-				padding-left: 2em;
-				max-width: 1.5em;
-				height: auto;
-			}
+		}
+	}
+
+	article {
+		@include span(3/4);
+		header{
+			h1.generated{
+				font-size: 1.5em;
+			}		
 		}
 	}
 
 	aside{
 		@include span(1/4);
-	  font-family: $raleway;
 	}
 
 	aside.right{
-		background-color: $geometry_gray;
 		min-height: 100vh;
 	}
 
 	div.asidewrapper{
 		margin-top: 3em;
 		padding-left: 2em;
-	}
-
-	article {
-		@include center;
-		@include span(3/4);
-	}
-
-	article.general{
-		header{
-			h1.generated{
-				font-size: 1.5em;
-			}		
-		}
 	}
 
 	.left{
@@ -358,11 +270,10 @@ $raleway: 'Raleway', sans-serif;
 	}
 
 	.center{
-		text-align:center;
+		text-align: center;
 	}
 
   .widget{
-
 	  section{
 	  	@include border-radius(2.5%);
 	  	width: 80%;
@@ -370,9 +281,6 @@ $raleway: 'Raleway', sans-serif;
 	  	background-color: white;
 	  	margin-bottom: 1em;
 	  	padding: 0.5em;
-	  	span.new{
-	  		display: none;
-	  	}
 	    header{
 	    	background-color: $geometry_gray;
 	      color: $map_blue;
@@ -397,6 +305,9 @@ $raleway: 'Raleway', sans-serif;
 	      	margin-bottom: 0.25em;
 	      }
 	    }
+	  	span.new{
+	  		display: none;
+	  	}
 	  }
   }
 }
@@ -409,7 +320,7 @@ $raleway: 'Raleway', sans-serif;
 		@include span(1/2);
 		background-color: white;
 		header{
-			margin-top: 3em;
+			margin-top: 2.25em;
 		}
 	}
 	.left{
@@ -419,7 +330,6 @@ $raleway: 'Raleway', sans-serif;
 
 	.map{
 	 	min-height: 100vh;
-	  background-color: $geometry_gray;
 		section{
 			padding-right: 2em;
 			margin-bottom: 1em;
@@ -446,11 +356,10 @@ $raleway: 'Raleway', sans-serif;
 					display: inline-block;
 					min-width: 1.5em;
 					text-align: center;
-					color: white;
-					font-family: $raleway;
+					color: $map_blue;
 					font-size: 0.75em;
 					font-weight: 700;
-					background-color: gray;
+					background-color: $dark_geometry_gray;
 				}
 				li{
 					margin-bottom:0.5em;
@@ -461,21 +370,26 @@ $raleway: 'Raleway', sans-serif;
 
 	.widget{
 		section{
-			span.new{
+			span.badge{
 				display: initial;
-				color: red;
-				font-family: $raleway;
-				font-size: 0.75em;
-				font-weight: 700;
-				padding: 0.05em;
-				background-color: pink;
-				@include border-radius(1%);
 			}
-
 		}
 	}
+}
 
-	
+span.badge{
+	@include border-radius(10%);
+	padding: 0.15em;
+	font-size: 0.75em;
+	font-weight: 700;
+}
+.new{
+	background-color: pink;
+	color: red;
+}
+.author{
+	background-color: $light_green;
+	color: green;
 }
 
 

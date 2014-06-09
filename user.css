@@ -478,20 +478,10 @@ span.badge {
   color: green; }
 
 @media screen and (min-width: 0em) {
-  article header {
-    background-color: #141823;
-    margin-top: 0; }
-    article header h1 {
-      background-color: #141823;
-      text-align: center;
-      font-size: 2.5em;
-      color: white; }
-    article header h2 {
-      padding: 0 1em 1em 1em;
-      color: #f9fafb;
-      text-align: center;
-      font-size: 1.5em; }
-  article form {
+  article .bio img {
+    max-width: 100%;
+    height: auto; }
+  article .social {
     *zoom: 1;
     width: auto;
     max-width: 1410px;
@@ -501,89 +491,15 @@ span.badge {
     margin-left: auto;
     padding-left: 0;
     padding-right: 0;
-    width: 80%;
-    height: 2em;
-    background-color: white; }
-    article form:before, article form:after {
+    font-size: 0.9em;
+    font-weight: 300; }
+    article .social:before, article .social:after {
       content: '';
       display: table; }
-    article form:after {
+    article .social:after {
       clear: both; }
-    article form input {
-      background-color: #f9fafb;
-      display: inline-block;
-      height: 120%;
-      width: 100%;
-      border-style: none;
-      border-bottom: solid 0.5px #141823;
-      font-size: 1em;
-      text-align: center; }
-    article form a {
-      text-decoration: none; }
-    article form .button {
-      margin-top: 0.25em; }
-  article div.socialauth {
-    margin-top: 6.5em; }
-    article div.socialauth .google, article div.socialauth .twitter {
-      display: none; }
-    article div.socialauth img {
-      -webkit-transition: opacity .25s ease-in-out;
-      -moz-transition: opacity .25s ease-in-out;
-      transition: opacity .25s ease-in-out;
-      *zoom: 1;
-      width: auto;
-      max-width: 1410px;
-      float: none;
-      display: block;
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: 0;
-      padding-right: 0;
-      margin-top: 0.5em;
-      width: 15em;
-      height: auto; }
-      article div.socialauth img:before, article div.socialauth img:after {
-        content: '';
-        display: table; }
-      article div.socialauth img:after {
-        clear: both; }
-    article div.socialauth img:hover {
-      opacity: 0.9; } }
-@media screen and (min-width: 20em) {
-  article header {
-    padding-top: 2.25em; } }
-@media screen and (min-width: 40.063em) {
-  article div.socialauth {
-    *zoom: 1;
-    float: left;
-    display: inline;
-    clear: none;
-    text-align: inherit;
-    padding-left: 0;
-    padding-right: 0;
-    width: 84.55%;
-    margin-left: 0%;
-    margin-right: 3%;
-    margin: 6.5em 7.5% 0 7.5%; }
-    article div.socialauth:before, article div.socialauth:after {
-      content: '';
-      display: table; }
-    article div.socialauth:after {
-      clear: both; }
-    article div.socialauth:last-child {
-      margin-right: 0%; }
-    article div.socialauth .google, article div.socialauth .twitter {
-      display: initial; }
-    article div.socialauth section {
-      *zoom: 1;
-      width: auto;
-      max-width: 1410px;
-      float: none;
-      display: block;
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: 0;
-      padding-right: 0;
+    article .social div {
+      padding: 1em 0;
       *zoom: 1;
       float: left;
       display: inline;
@@ -591,24 +507,25 @@ span.badge {
       padding-left: 0;
       padding-right: 0;
       text-align: inherit;
-      width: 33.33333%;
+      width: 100%;
       margin-left: 0%;
-      margin-right: 0%; }
-      article div.socialauth section:before, article div.socialauth section:after {
+      margin-right: 0%;
+      text-align: center; }
+      article .social div:before, article .social div:after {
         content: '';
         display: table; }
-      article div.socialauth section:after {
+      article .social div:after {
         clear: both; }
-      article div.socialauth section:before, article div.socialauth section:after {
-        content: '';
-        display: table; }
-      article div.socialauth section:after {
-        clear: both; }
-      article div.socialauth section img {
-        width: 11.5em;
-        height: auto; } }
-@media screen and (min-width: 60.063em) {
-  article div.socialauth section {
+      article .social div a {
+        text-decoration: none;
+        color: #141823; }
+    article .social .active, article .social div:hover {
+      background-color: #f1f1f1;
+      font-weight: 700; }
+      article .social .active a, article .social div:hover a {
+        color: #141823; } }
+@media screen and (min-width: 20em) {
+  article .social div {
     *zoom: 1;
     float: left;
     display: inline;
@@ -616,11 +533,15 @@ span.badge {
     padding-left: 0;
     padding-right: 0;
     text-align: inherit;
-    width: 100%;
+    width: 33.33333%;
     margin-left: 0%;
-    margin-right: 0%; }
-    article div.socialauth section:before, article div.socialauth section:after {
+    margin-right: 0%;
+    text-align: center;
+    border-bottom: solid 0.25em red; }
+    article .social div:before, article .social div:after {
       content: '';
       display: table; }
-    article div.socialauth section:after {
-      clear: both; } }
+    article .social div:after {
+      clear: both; }
+  article .social .active, article .social div:hover {
+    border-bottom: solid 0.25em #141823; } }
