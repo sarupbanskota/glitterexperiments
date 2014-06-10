@@ -250,7 +250,160 @@
             font-weight: 700; }
 
   aside {
-    display: none; } }
+    display: none; }
+
+  .widget section {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: inherit;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    *zoom: 1;
+    width: auto;
+    max-width: 1410px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 1em auto;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    border-radius: 0.5em;
+    box-shadow: inset 0 0 0.125em 0 #141823;
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    padding: 0.75em; }
+    .widget section:before, .widget section:after {
+      content: '';
+      display: table; }
+    .widget section:after {
+      clear: both; }
+    .widget section:before, .widget section:after {
+      content: '';
+      display: table; }
+    .widget section:after {
+      clear: both; }
+    .widget section header {
+      margin: 0;
+      padding: 0.25em;
+      background-color: #f9fafb;
+      color: #141823;
+      font-weight: 700;
+      font-size: 0.75em; }
+      .widget section header h1 {
+        font-size: 1.5em; }
+      .widget section header h2 {
+        font-size: 1em; }
+    .widget section article {
+      min-height: initial;
+      *zoom: 1;
+      float: left;
+      display: inline;
+      clear: none;
+      text-align: inherit;
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 3%;
+      font-size: 0.85em; }
+      .widget section article:before, .widget section article:after {
+        content: '';
+        display: table; }
+      .widget section article:after {
+        clear: both; }
+      .widget section article:last-child {
+        margin-right: 0%; }
+      .widget section article p {
+        *zoom: 1;
+        float: left;
+        display: inline;
+        clear: none;
+        text-align: inherit;
+        padding-left: 0;
+        padding-right: 0;
+        width: 31.33333%;
+        margin-left: 0%;
+        margin-right: 3%;
+        text-align: center; }
+        .widget section article p:before, .widget section article p:after {
+          content: '';
+          display: table; }
+        .widget section article p:after {
+          clear: both; }
+        .widget section article p:last-child {
+          margin-right: 0%; }
+        .widget section article p a {
+          text-decoration: none;
+          color: #141823; }
+        .widget section article p a:hover {
+          text-decoration: underline; }
+      .widget section article ul {
+        list-style-type: none;
+        margin: 0;
+        font-size: 0.8em; }
+        .widget section article ul li {
+          margin: 0.25em auto;
+          font-size: 1.2em; }
+          .widget section article ul li a {
+            text-decoration: none;
+            color: #141823; }
+          .widget section article ul li a:hover {
+            font-weight: 700; }
+    .widget section footer {
+      *zoom: 1;
+      float: left;
+      display: inline;
+      clear: none;
+      text-align: inherit;
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 3%; }
+      .widget section footer:before, .widget section footer:after {
+        content: '';
+        display: table; }
+      .widget section footer:after {
+        clear: both; }
+      .widget section footer:last-child {
+        margin-right: 0%; }
+      .widget section footer p {
+        *zoom: 1;
+        float: left;
+        display: inline;
+        clear: none;
+        text-align: inherit;
+        padding-left: 0;
+        padding-right: 0;
+        width: 31.33333%;
+        margin-left: 0%;
+        margin-right: 3%;
+        text-align: center; }
+        .widget section footer p:before, .widget section footer p:after {
+          content: '';
+          display: table; }
+        .widget section footer p:after {
+          clear: both; }
+        .widget section footer p:last-child {
+          margin-right: 0%; }
+        .widget section footer p a {
+          text-decoration: none;
+          color: white; }
+      .widget section footer .button {
+        -webkit-border-radius: 1em;
+        -moz-border-radius: 1em;
+        -ms-border-radius: 1em;
+        border-radius: 1em; } }
 @media screen and (min-width: 20em) {
   article form section.decision {
     padding: 0.25em; }
@@ -357,11 +510,19 @@
       clear: both; }
 
   aside.right {
+    position: fixed;
     min-height: 100vh; }
-
-  div.asidewrapper {
-    margin-top: 3em;
-    padding-left: 2em; }
+    aside.right div.asidewrapper {
+      margin-top: 3em;
+      margin-left: -1.25em;
+      padding-left: 2em; }
+      aside.right div.asidewrapper header h1 {
+        font-size: 1em; }
+      aside.right div.asidewrapper header h2 {
+        font-size: 1em;
+        font-weight: 300;
+        border-bottom: solid 0.1em #f1f1f1;
+        margin-bottom: 0.5em; }
 
   .left {
     display: none; }
@@ -370,38 +531,7 @@
     text-align: left; }
 
   .center {
-    text-align: center; }
-
-  .widget section {
-    -webkit-border-radius: 2.5%;
-    -moz-border-radius: 2.5%;
-    -ms-border-radius: 2.5%;
-    border-radius: 2.5%;
-    width: 80%;
-    box-shadow: inset 0 0 0.125em 0 #141823;
-    background-color: white;
-    margin-bottom: 1em;
-    padding: 0.5em; }
-    .widget section header {
-      background-color: #f9fafb;
-      color: #141823;
-      font-weight: 700;
-      font-size: 0.75em;
-      margin-bottom: 0.25em; }
-    .widget section a {
-      text-decoration: none;
-      color: #141823; }
-    .widget section a:hover {
-      font-weight: 700; }
-    .widget section ul {
-      list-style-type: none;
-      margin: 0;
-      font-size: 0.8em; }
-      .widget section ul li {
-        margin-top: 0.25em;
-        margin-bottom: 0.25em; }
-    .widget section span.new {
-      display: none; } }
+    text-align: center; } }
 @media screen and (min-width: 64.063em) {
   article {
     *zoom: 1;
@@ -428,6 +558,7 @@
     text-align: right; }
 
   .map {
+    margin-top: 3em;
     min-height: 100vh; }
     .map section {
       padding-right: 2em;
@@ -466,14 +597,10 @@ span.badge {
   -ms-border-radius: 10%;
   border-radius: 10%;
   padding: 0.15em;
-  font-size: 0.75em;
+  font-size: 1em;
   font-weight: 700; }
 
-.new {
-  background-color: pink;
-  color: red; }
-
-.author {
+.author, .pr {
   background-color: #c1f0c1;
   color: green; }
 
