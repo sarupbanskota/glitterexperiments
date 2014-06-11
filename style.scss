@@ -25,32 +25,6 @@ $raleway: 'Raleway', sans-serif;
           border-radius: $radius;
 }
 
-//remove excess fonnt bckgcolo etc
-
-.button{
-	color: white;
-	@include center;
-	text-align: center;
-	@include border-radius(2.5%);
-	background-color: $map_blue;
-	font-size: 1em;
-	height: 1.5em;
-	padding: 0.5em;
-	margin: 1em;
-	-webkit-transition: opacity .25s ease-in-out;
-		 -moz-transition: opacity .25s ease-in-out;
-		 			transition: opacity .25s ease-in-out;
-}
-.button:hover{
-	opacity: 0.9;
-}
-.recommended{
-	background-color: $light_green;
-	box-shadow:inset 0 0 0.125em 0 green;
-	color: green;
-}
-
-
 // smaller phones
 
 @media screen and (min-width: 0em){
@@ -130,10 +104,40 @@ $raleway: 'Raleway', sans-serif;
 				font-size: 0.85em;
 				text-align: left;
 			}
-			p.button{
-				margin: 0.5em;
+			input[type="submit"]{
+				@include center;
 				text-align: center;
+				border-style: none;
+				@include border-radius(0.25em);
+				background-color: $map_blue;
+				color: white;
+				font-size: 1em;
+				height: 2.5em;
+				width: 100%;
+				margin-top: 1em;
+				-webkit-transition: opacity .25s ease-in-out;
+					 -moz-transition: opacity .25s ease-in-out;
+					 			transition: opacity .25s ease-in-out;
 			}
+			input[type="submit"].recommended{
+				background-color: $light_green;
+				box-shadow:inset 0 0 0.125em 0 green;
+				color: green;
+			}
+			input[type="submit"]:hover{
+				opacity: 0.9;
+				cursor: pointer;
+			}
+
+			section.decision{
+				padding: 0.25em;
+				input{
+					@include col(1);
+					margin-top: 0.25em;
+					text-align: center;
+				}
+			}
+
 			a{
 				text-decoration: none;
 			}
@@ -142,7 +146,6 @@ $raleway: 'Raleway', sans-serif;
 		.guide{
 			@include span(1);
 			div{
-				margin: 1em;
 				padding: 1em;
 				background-color: $geometry_gray;
 	  		box-shadow:inset 0 0 0.5em 0 $dark_geometry_gray;
@@ -150,11 +153,15 @@ $raleway: 'Raleway', sans-serif;
 				min-height: 5em;
 				text-align: center;
 				font-weight: 700;
-				p.button{
-					margin: 1em;
-				}
 				a{
 					text-decoration: none;
+				}
+				form{
+					input{
+						margin-top: 0;
+						margin-bottom: 1em;
+						width: 80%;
+					}
 				}
 			}
 		}
@@ -179,6 +186,34 @@ $raleway: 'Raleway', sans-serif;
 			  }
 	  	}
 	  }
+	  .comments{
+	  	@include span(1);
+	  	padding: 0;
+			border-top: solid 0.1em red;
+			div{
+				padding: 1em;
+				padding-bottom: 0;
+				header{
+					margin: 0;
+					h1, h2{
+						padding: 0.25em;
+					}
+					h2{
+						border-bottom: solid 0.15em $dark_geometry_gray;
+					}
+				}
+				article{
+					padding: 0.25em;
+				}
+				h1, h2, article{
+					@include span(1);
+					@include center;
+					min-height: 0;
+					font-size: 0.8em;
+					background-color: $geometry_gray;
+				}	
+			}
+		}
 	}
 
   aside{
@@ -246,20 +281,19 @@ $raleway: 'Raleway', sans-serif;
       }
       footer{
         @include col(1);
-        p{
+        form{
+        	padding: 0;
           @include col(1/3);
           text-align: center;
+          background-color: white;
           a{
             text-decoration: none;
             color: white;
           }
         }
-        .button{
-          @include border-radius(1em);
-        }
       }
     }
-  }
+  }	
 
 }
 
@@ -268,16 +302,6 @@ $raleway: 'Raleway', sans-serif;
 @media screen and (min-width: 20em){
 
 	article{
-		form{
-			section.decision{
-				padding: 0.25em;
-				p{
-					@include col(1/2);
-					text-align: center;
-					margin: 0.25em;
-				}
-			}
-		}
 
 		.feed{
 			ul{
@@ -290,8 +314,22 @@ $raleway: 'Raleway', sans-serif;
 
 }
 
-// potrait tablets
+@media screen and (min-width: 25em){
+	article{
+		form{
+			section.decision{
+				padding: 0.25em;
+				input{
+					@include col(1/2);
+					text-align: center;
+					margin: 0.25em;
+				}
+			}
+		}
+	}
+}
 
+// potrait tablets
 
 @media screen and (min-width: 60.063em){
 
@@ -328,7 +366,6 @@ $raleway: 'Raleway', sans-serif;
 	}
 
 	aside.right{
-		position: fixed;
 		min-height: 100vh;
 		div.asidewrapper{
 			margin-top: 3em;

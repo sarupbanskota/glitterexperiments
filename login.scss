@@ -38,9 +38,6 @@
 			a{
 				text-decoration: none;
 			}
-			.button{
-				margin-top: 0.25em;
-			}
 		}
 		div.socialauth{
 			margin-top: 6.5em;
@@ -102,4 +99,9 @@
 		}
 	}
 
+	aside.right{
+		div.asidewrapper{
+			margin-top: 0;
+		}
+	}
 }
